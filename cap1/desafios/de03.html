@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafios</title>
+</head>
+<body>
+    <h1>Calcule e informe o valor para pagamento á vista com 10% de desconto e o valor em 3x</h1>
+    <script>
+      const preco = Number(prompt("Preço R$: "))
+      const desc = preco - (preco * 10 / 100)
+      const parc = preco / 3
+      alert(`Preço R$: ${preco}`)
+      alert(`À vista R$: ${desc}`)
+      alert(`Ou 3x de R$: ${parc.toFixed(1)}`)
+    </script>
+</body>
+</html>
