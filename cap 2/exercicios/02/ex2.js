@@ -1,18 +1,17 @@
-const frm = document.querySelector("form")
-const resp2 = document.querySelector("#resp")
+const frm = document.querySelector("form");
+const h3 = document.querySelector("#resp");
 
 
 frm.addEventListener("submit", (e) => {
   e.preventDefault()
 
   const valor = Number(frm.inValor.value);
-  const time = Number(frm.inTime.value)
+  const tempo = Number(frm.inTime.value);
 
-  let s = 0;
-  let msg = " ";
+  const blocos = Math.ceil(tempo / 15);
+  const total = valor * blocos;
 
-  if (valor >= 3) {
-      const time = 
-      s = valor * 2
-  }
+  
+
+  h3.textContent = `Valor a Pagar R$: ${total.toFixed(2)}`;
 })
