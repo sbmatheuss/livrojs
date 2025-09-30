@@ -1,7 +1,6 @@
 const prompt = require("prompt-sync")() // adiciona pacote prompt-sync
 const pessoas = Number(prompt("N Pessoas: ")) // le dados de entrada
 const peixes = Number(prompt("N Peixes: ")) 
-
 let pagar 
 if(peixes <= pessoas) {
   pagar = pessoas * 20
