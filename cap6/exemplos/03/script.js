@@ -33,9 +33,7 @@ frm.btUrgencia.addEventListener("click", () => {
     pacientes.unshift(nome)
     let lista = ""
 
-    pacientes.forEach((paciente, i) => {
-        lista += `${i + 1} - ${paciente}\n`
-    })
+    pacientes.forEach((paciente, i) => (lista += `${i + 1} - ${paciente}\n`))
 
     respLista.innerText = lista
     frm.inPaciente.value = ""
@@ -45,6 +43,7 @@ frm.btUrgencia.addEventListener("click", () => {
 frm.btAtender.addEventListener("click", () => {
     if (pacientes.length == 0) {
         alert("Não há pacientes na lista de espera")
+        frm.inPaciente.focus()
         return
     }
 
@@ -52,9 +51,14 @@ frm.btAtender.addEventListener("click", () => {
     respNome.innerText = atender
 
     let lista = ""
-    pacientes.forEach((paciente, i) => {
-        lista += `${i + 1} - ${paciente}\n`
-    }
+    pacientes.forEach((paciente, i) => (lista += `${i + 1} - ${paciente}\n`))
 
     respLista.innerText = lista 
+    
+})
+
+
+    
+
+
 
