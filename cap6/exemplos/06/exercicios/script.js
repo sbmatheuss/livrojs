@@ -1,6 +1,6 @@
 const frm = document.querySelector("form")
 const respo = document.querySelector("pre")
-const carros = {}
+const carros = []
 
 frm.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -14,3 +14,35 @@ frm.addEventListener("submit", (e) => {
 
     frm.btListar.dispatch(new Event("click"))
 })
+
+frm.btListar.addEventListener("click", () => {
+    if(carros.length == 0){
+        alert("Não há carros na lista")
+        return
+    }
+
+    const Lista = carros.reduce((acumulador, carro) =>
+        acumulador + carro.modelo + " - R$: " + carro.preco.toFixed(2) + "\n", "")
+        respo.innerText = `Lista dos Carros Cadastrados\n${"-".repeat(40)}\n${Lista}`
+})
+
+frm.btFiltrar.addEventListener("click", () => {
+    const maximo = Number(prompt("Qual o valor máximo que o cliente deseja pagar?"))
+    if(maximo == 0 || isNaN(maximo)) {
+        return
+    }
+    
+    const carrosFilter = carros.filter(carro => carro.preco <= maximo)
+    if(carrosFilter.length == 0) {
+        alert("Não há carros com preço inferior ou igual ao solicitado")
+        return
+    }
+    
+    let lista = ""
+    for(const carro of carrosFilter) {
+        lista += `${carro.modelo} - R$: ${carro.preco.toFixed(2)}\n`
+    }
+    respo.innerText = `Carros Até R$: ${maximo.toFixed(2)}\n${"-".repeat(40)}\n${lista}`
+})
+
+
