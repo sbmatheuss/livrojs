@@ -22,7 +22,7 @@ frm.btListar.addEventListener("click", () => {
   let lista = " "
   for(const crianca of criancas){
     const {nome, idade} = crianca
-    lista += " - " + idade + " anos\n"
+    lista += nome + " - " + idade + " anos\n"
   }
   resp.innerText = lista 
 })
