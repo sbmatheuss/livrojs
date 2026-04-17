@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Campeonato - Fase Eliminatória</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; }
+    h1 { text-align: center; color: #333; }
+    input { padding: 8px; width: 70%; border: 1px solid #ccc; border-radius: 4px; }
+    button { padding: 8px 12px; margin: 5px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #0056b3; }
+    #area-clubes, #area-jogos { margin-top: 20px; padding: 10px; border: 1px solid #ddd; border-radius: 4px; min-height: 50px; }
+    #mensagem { color: red; font-weight: bold; margin-top: 8px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th { background: #007bff; color: white; padding: 8px; }
+    td { padding: 8px; border: 1px solid #ddd; text-align: center; }
+    tr:nth-child(even) { background: #f2f2f2; }
+  </style>
+</head>
+<body>
+  <h1>⚽ Fase Eliminatória</h1>
+
+  <input type="text" id="input-clube" placeholder="Nome do clube...">
+  <br><br>
+  <button onclick="adicionarClube()">Adicionar Clube</button>
+  <button onclick="listarClubes()">Listar Clubes</button>
+  <button onclick="montarTabela()">Montar Tabela de Jogos</button>
+
+  <p id="mensagem"></p>
+
+  <div id="area-clubes"></div>
+  <div id="area-jogos"></div>
+
+ <script src="jogos.js"></script>
+</body>
+</html>
