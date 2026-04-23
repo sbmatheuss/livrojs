@@ -1,19 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exp05</title>
+    <title>Object.freeze() - Exercício</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .resultado {
+            background: #f4f4f4;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .erro {
+            color: red;
+        }
+        .sucesso {
+            color: green;
+        }
+    </style>
 </head>
 <body>
-    <h1>Programa E-mail Institucional</h1>
-    <form>
-        <p>Funcionário:
-            <input type="text" id="inFuncionario" autofocus required>
-        </p>
-        <input type="submit" value="Gerar E-mail">
-    </form>
-    <h3></h3>
+    <h1>Object.freeze() - Exercício Prático</h1>
+
+    <div class="resultado">
+        <h2>Teste 1: Tentando modificar um objeto congelado</h2>
+        <p id="teste1"></p>
+    </div>
+
+    <div class="resultado">
+        <h2>Teste 2: Verificando se o objeto está congelado</h2>
+        <p id="teste2"></p>
+    </div>
+
+    <div class="resultado">
+        <h2>Teste 3: Tentando adicionar nova propriedade</h2>
+        <p id="teste3"></p>
+    </div>
+
+    <div class="resultado">
+        <h2>Teste 4: Tentando deletar propriedade</h2>
+        <p id="teste4"></p>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
