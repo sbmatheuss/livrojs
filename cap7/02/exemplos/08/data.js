@@ -14,6 +14,7 @@ const ts = new Date(1700000000000)
 console.log(agora)
 console.log(natal)
 console.log(data)
+
 console.log(ts)
 
 // ATENÇÃO: OS MESES VÃO DE 0(JANEIRO) A 11(DEZEMBRO)
